@@ -24,17 +24,6 @@ export class InputEditor implements IEditor {
       className: 'absolute',
     })
 
-    /**
-     * vue2 渲染组件:
-      const CompConstructor = Vue.extend(CustomInput) // CustomInput 是一个 Vue 组件
-      const instance = new CompConstructor({ el: document.createElement('div') })
-
-      // 或者用 new Vue() 的形式创建
-
-      instance.$slots.default = [vnode]
-      target.appendChild(instance.$el)
-     */
-
     const updateView = () => {
       const vn = h(CustomInput, {
         modelValue: this.value,
